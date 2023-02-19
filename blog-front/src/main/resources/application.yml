@@ -1,0 +1,101 @@
+#运行环境
+server:
+  #服务器端口配置
+  port: 80
+  servlet:
+    context-path: /
+spring:
+  #druidDataSource配置
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://43.139.41.149:3306/Blog
+      username: root
+      password: R5hcmCLFTNHkjt2A
+      #初始连接数
+      initialSize: 10
+      #最大连接数
+      max-active: 20
+      #获取连接最大等待时间
+      max-wait: 60000
+      #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 6000
+      #配置一个连接在池中最小生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 30000
+      #申请连接的时候检测，建议配置为true，不影响性能，并且保证安全性
+      testWhileIdle: true
+  #邮箱基础配置
+  mail:
+    host: smtp.qq.com
+    #发送者邮箱
+    username: 952833836@qq.com
+    #配置密码,注意不是真正的密码，而是刚刚申请到的授权码 如果是Outlook密码 — 与您用于登录 Outlook 网站的密码相同
+    password: dsvvxadepwfmbbig
+    #端口号465或587
+    port: 587
+    #服务协议
+    protocol: smtp
+    #默认的邮件编码为UTF-8
+    default-encoding: UTF-8
+    properties:
+      mail:
+        #配置SSL 加密工厂
+        smtp:
+          ssl:
+            #本地测试，先放开ssl
+            enable: false
+            required: false
+          #开启debug模式，这样邮件发送过程的日志会在控制台打印出来，方便排查错误
+        debug: true
+  servlet:
+    multipart:
+      #单个文件最大上传大小
+      max-file-size: 500MB
+      #总上传大小
+      max-request-size: 1024MB
+  redis:
+    host: 43.139.41.149
+    port: 6379
+    database: 0
+    password: a13207321950Thd
+    username: default
+    lettuce:
+      pool:
+        max-active: 20  #最大连接数，负值表示没有限制，默认8
+        max-wait: -1    #最大阻塞等待时间，负值表示没限制，默认-1
+        max-idle: 8     #最大空闲连接，默认8
+        min-idle: 0     #最小空闲连接，默认0
+  cache:
+    #指定缓存组件为redis
+    type: redis
+    redis:
+      #是否启用前缀  默认启用
+      use-key-prefix: true
+      #自定义前缀（需先启用前缀）
+      key-prefix: PersonBlog_
+      #设置缓存过期时间 单位毫秒
+      time-to-live: 360000
+      #是否缓存空值，防止缓存穿透
+      cache-null-values: true
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:/mapping/*Mapper.xml
+
+  global-config:
+    # 全局配置
+    db-config:
+      #逻辑删除
+      logic-delete-field: deFlag
+      # 删除前
+      logic-not-delete-value: 0
+      # 删除后
+      logic-delete-value: 1
+      #全局设置主键生成策略为uuid
+      id-type: assign_uuid
+
+
+
