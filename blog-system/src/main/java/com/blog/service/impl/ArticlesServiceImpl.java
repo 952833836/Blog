@@ -9,6 +9,7 @@ import com.blog.mapper.ArticlesMapper;
 import com.blog.mapper.CategoryMapper;
 import com.blog.pojo.ResponseResult;
 import com.blog.pojo.entity.Articles;
+import com.blog.pojo.vo.ArticleDetailVo;
 import com.blog.pojo.vo.ArticlesVo;
 import com.blog.pojo.vo.HotArticlesVo;
 import com.blog.pojo.vo.PageVo;
@@ -20,6 +21,7 @@ import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -85,6 +87,21 @@ public class ArticlesServiceImpl extends ServiceImpl<ArticlesMapper, Articles> i
         }
         PageVo pageVo = new PageVo(list, articlesPage.getTotal());
         return ResponseResult.okResult(pageVo);
+    }
+
+    @Override
+    public ResponseResult<ArticleDetailVo> getArticleDetail(String id) {
+        Articles articles = articlesMapper.selectById(id);
+        if(Objects.isNull(articles)){
+            throw new RuntimeException("该文章不存在");
+        }
+        String categoryId = articles.getCategoryId();
+        if(StringUtils.hasText(categoryId)){
+            String name = categoryMapper.selectById(categoryId).getName();
+            articles = articles.setCategoryName(name);
+        }
+        ArticleDetailVo articleDetailVo = BeanCopyUtil.copyBean(articles, ArticleDetailVo.class);
+        return ResponseResult.okResult(articleDetailVo);
     }
 
 

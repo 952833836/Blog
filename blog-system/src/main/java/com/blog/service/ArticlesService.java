@@ -3,6 +3,7 @@ package com.blog.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.blog.pojo.ResponseResult;
 import com.blog.pojo.entity.Articles;
+import com.blog.pojo.vo.ArticleDetailVo;
 import com.blog.pojo.vo.HotArticlesVo;
 import com.blog.pojo.vo.PageVo;
 
@@ -34,4 +35,12 @@ public interface ArticlesService extends IService<Articles> {
      * @return {@link ResponseResult}
      */
     ResponseResult<List<PageVo>> queryListArticle(String categoryId, Integer pageNum, Integer pageSize);
+
+    /**
+     * 获取文章细节
+     *
+     * @param id id
+     * @return {@link ResponseResult}
+     */
+    ResponseResult<ArticleDetailVo> getArticleDetail(String id);
 }

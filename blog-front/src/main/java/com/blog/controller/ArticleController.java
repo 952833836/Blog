@@ -1,12 +1,14 @@
 package com.blog.controller;
 
 import com.blog.pojo.ResponseResult;
+import com.blog.pojo.vo.ArticleDetailVo;
 import com.blog.pojo.vo.HotArticlesVo;
 import com.blog.pojo.vo.PageVo;
 import com.blog.service.ArticlesService;
 import org.springframework.data.repository.query.Param;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -37,6 +39,11 @@ public class ArticleController {
     @GetMapping("/articleList")
     public ResponseResult<List<PageVo>> queryListArticle(@Param("categoryId") String categoryId,@Param("pageNum") @NotNull @Min(0) Integer pageNum,@Param("pageSize") @NotNull @Min(0) Integer pageSize){
         return articlesService.queryListArticle(categoryId,pageNum,pageSize);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseResult<ArticleDetailVo> getArticleDetail(@PathVariable("id") @NotNull String id){
+        return articlesService.getArticleDetail(id);
     }
 
 }

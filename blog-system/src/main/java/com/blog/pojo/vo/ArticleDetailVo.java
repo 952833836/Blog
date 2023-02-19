@@ -1,25 +1,20 @@
 package com.blog.pojo.vo;
 
-import lombok.AllArgsConstructor;
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * 文章Vo
+ * 文章详细签证官
  *
  * @author a1387
  * @date 2023/02/19
  */
 @Data
 @Accessors(chain = true)
-@AllArgsConstructor
-@NoArgsConstructor
-public class ArticlesVo implements Serializable {
-
+public class ArticleDetailVo extends ArticlesVo{
     private static final long serialVersionUID = 1L;
     /**
      *
@@ -34,6 +29,11 @@ public class ArticlesVo implements Serializable {
      * 文章摘要
      */
     private String summary;
+
+    /**
+     * 文章正文
+     */
+    private String content;
 
     /**
      * 所属类别id
