@@ -1,50 +1,58 @@
 package com.blog.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
-import lombok.Data;
-import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import lombok.Data;
+import lombok.experimental.Accessors;
 
 /**
- * 类别
+ * 友链表
  *
  * @author a1387
- * @TableName category
- * @date 2023/02/18
+ * @TableName link
+ * @date 2023/02/20
  */
-@TableName(value = "category")
+@TableName(value ="link")
 @Data
 @Accessors(chain = true)
-public class Category implements Serializable {
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
+public class Link implements Serializable {
     /**
-     *
+     * 
      */
     @TableId(value = "id")
     private String id;
+
     /**
-     * 分类名
+     * 友链名称
      */
     @TableField(value = "name")
     private String name;
+
     /**
-     * 父分类id，如果没有父分类为-1
+     * 友链地址
      */
-    @TableField(value = "pid")
-    private String pid;
+    @TableField(value = "address")
+    private String address;
+
     /**
-     * 状态0:正常,1禁用
+     * 友链logo
      */
-    @TableField(value = "status")
-    private Integer status;
+    @TableField(value = "logo")
+    private String logo;
+
     /**
-     * 描述
+     * 友链详情
      */
     @TableField(value = "description")
     private String description;
+
+    /**
+     * 审核状态(0审核通过，1待审核，2审核不通过)
+     */
+    @TableField(value = "status",fill = FieldFill.INSERT)
+    private Integer status;
 
     /**
      * 创建者id
@@ -72,5 +80,8 @@ public class Category implements Serializable {
     @TableField(value = "del_flag")
     @TableLogic
     private Integer delFlag;
+
+    @TableField(exist = false)
+    private static final long rr = 1L;
 
 }

@@ -21,4 +21,19 @@ public class SystemConstants {
      * 状态正常
      */
     public static final Integer STATUS_NORMAL = 0;
+
+    /**
+     * 审核通过
+     */
+    public static final Integer APPROVED=0;
+
+    /**
+     * 审核未通过
+     */
+    public static final Integer FAILED_TO_PASS_THE_REVIEW=2;
+
+    /**
+     * 正在审核
+     */
+    public static final Integer AUDITING=1;
 }
