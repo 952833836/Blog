@@ -67,7 +67,15 @@ public enum HttpResponseCode {
     /**
      * 登录错误
      */
-    LOGIN_ERROR(505, "用户名或密码错误");
+    LOGIN_ERROR(505, "用户名或密码错误"),
+    /**
+     * 令牌非法或超时
+     */
+    TOKEN_ILLEGAL_OR_TIMEOUT(506, "token非法或超时"),
+    /**
+     * 参数异常
+     */
+    PARAMETER_EXCEPTION(405, "参数异常");
 
     private Integer code;
     private String msg;

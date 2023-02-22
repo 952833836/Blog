@@ -37,12 +37,12 @@ public class ArticleController {
     }
 
     @GetMapping("/articleList")
-    public ResponseResult<List<PageVo>> queryListArticle(@Param("categoryId") String categoryId,@Param("pageNum") @NotNull @Min(0) Integer pageNum,@Param("pageSize") @NotNull @Min(0) Integer pageSize){
-        return articlesService.queryListArticle(categoryId,pageNum,pageSize);
+    public ResponseResult<List<PageVo>> queryListArticle(@Param("categoryId") String categoryId, @Param("pageNum") @NotNull @Min(0) Integer pageNum, @Param("pageSize") @NotNull @Min(0) Integer pageSize) {
+        return articlesService.queryListArticle(categoryId, pageNum, pageSize);
     }
 
     @GetMapping("/{id}")
-    public ResponseResult<ArticleDetailVo> getArticleDetail(@PathVariable("id") @NotNull String id){
+    public ResponseResult<ArticleDetailVo> getArticleDetail(@PathVariable("id") @NotNull String id) {
         return articlesService.getArticleDetail(id);
     }
 

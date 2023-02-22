@@ -14,7 +14,6 @@ import com.blog.pojo.vo.ArticlesVo;
 import com.blog.pojo.vo.HotArticlesVo;
 import com.blog.pojo.vo.PageVo;
 import com.blog.service.ArticlesService;
-import com.blog.service.CategoryService;
 import com.blog.util.BeanCopyUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -74,7 +73,7 @@ public class ArticlesServiceImpl extends ServiceImpl<ArticlesMapper, Articles> i
                 .stream()
                 //获取对应的分类标签名
                 .map(e -> {
-                    if(StringUtils.hasText(e.getCategoryId())){
+                    if (StringUtils.hasText(e.getCategoryId())) {
                         return e.setCategoryName(categoryMapper.selectById(e.getCategoryId()).getName());
                     }
                     return e;
@@ -92,11 +91,11 @@ public class ArticlesServiceImpl extends ServiceImpl<ArticlesMapper, Articles> i
     @Override
     public ResponseResult<ArticleDetailVo> getArticleDetail(String id) {
         Articles articles = articlesMapper.selectById(id);
-        if(Objects.isNull(articles)){
+        if (Objects.isNull(articles)) {
             throw new RuntimeException("该文章不存在");
         }
         String categoryId = articles.getCategoryId();
-        if(StringUtils.hasText(categoryId)){
+        if (StringUtils.hasText(categoryId)) {
             String name = categoryMapper.selectById(categoryId).getName();
             articles = articles.setCategoryName(name);
         }

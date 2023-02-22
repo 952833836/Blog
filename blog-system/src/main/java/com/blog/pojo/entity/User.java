@@ -8,48 +8,69 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 友链表
+ * 用户
+ * 用户表
  *
  * @author a1387
- * @TableName link
- * @date 2023/02/20
+ * @TableName user
+ * @date 2023/02/22
  */
-@TableName(value = "link")
+@TableName(value = "user")
 @Data
 @Accessors(chain = true)
-public class Link implements Serializable {
+public class User implements Serializable {
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
     /**
-     *
+     * 主键
      */
     @TableId(value = "id")
     private String id;
     /**
-     * 友链名称
+     * 用户名
      */
-    @TableField(value = "name")
-    private String name;
+    @TableField(value = "user_name")
+    private String username;
     /**
-     * 友链地址
+     * 昵称
      */
-    @TableField(value = "address")
-    private String address;
+    @TableField(value = "nick_name")
+    private String nickname;
     /**
-     * 友链logo
+     * 密码
      */
-    @TableField(value = "logo")
-    private String logo;
+    @TableField(value = "password")
+    private String password;
     /**
-     * 友链详情
+     * 用户类型：0代表普通用户，1代表管理员
      */
-    @TableField(value = "description")
-    private String description;
+    @TableField(value = "type")
+    private Integer type;
     /**
-     * 审核状态(0审核通过，1待审核，2审核不通过)
+     * 账号状态（0正常 1停用）
      */
-    @TableField(value = "status", fill = FieldFill.INSERT)
+    @TableField(value = "status")
     private Integer status;
+    /**
+     * 邮箱
+     */
+    @TableField(value = "email")
+    private String email;
+    /**
+     * 手机号
+     */
+    @TableField(value = "phonenumber")
+    private String phoneNumber;
+    /**
+     * 用户性别（0男，1女，2未知）
+     */
+    @TableField(value = "sex")
+    private Integer sex;
+    /**
+     * 头像
+     */
+    @TableField(value = "avatar")
+    private String avatar;
     /**
      * 创建者id
      */
@@ -76,5 +97,6 @@ public class Link implements Serializable {
     @TableField(value = "del_flag")
     @TableLogic
     private Integer delFlag;
+
 
 }

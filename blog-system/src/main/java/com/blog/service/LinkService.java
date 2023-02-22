@@ -1,8 +1,8 @@
 package com.blog.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.blog.pojo.ResponseResult;
 import com.blog.pojo.entity.Link;
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.blog.pojo.vo.LinkVo;
 
 import java.util.List;
@@ -22,5 +22,5 @@ public interface LinkService extends IService<Link> {
      *
      * @return {@link ResponseResult}
      */
-    public ResponseResult<List<LinkVo>> getLinkList();
+     ResponseResult<List<LinkVo>> getLinkList();
 }

@@ -1,0 +1,440 @@
+2023-02-21 15:41:01.129 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2023-02-21 15:41:01.144 [main] INFO  com.blog.BlogFrontApplication - Starting BlogFrontApplication using Java 1.8.0_321 on aaa with PID 16196 (D:\Blog\blog-front\target\classes started by a1387 in D:\Blog)
+2023-02-21 15:41:01.146 [main] INFO  com.blog.BlogFrontApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 15:41:02.897 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-21 15:41:02.901 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-21 15:41:02.949 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2023-02-21 15:41:03.897 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2023-02-21 15:41:03.912 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2023-02-21 15:41:03.914 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-21 15:41:03.914 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-21 15:41:04.352 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-21 15:41:04.352 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3081 ms
+2023-02-21 15:41:04.558 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-02-21 15:41:27.495 [main] ERROR com.alibaba.druid.pool.DruidDataSource - init datasource error, url: jdbc:mysql://43.139.41.149:3306/Blog
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1652)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1718)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:915)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1930)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1872)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.blog.BlogFrontApplication.main(BlogFrontApplication.java:17)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 84 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 87 common frames omitted
+2023-02-21 15:41:27.506 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-02-21 15:41:29.636 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'blogLoginController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'authenticationManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityConfig': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.blog.filter.TokenValidationFilter' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2023-02-21 15:41:29.664 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-02-21 15:41:29.670 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-02-21 15:41:29.673 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2023-02-21 15:41:29.689 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-21 15:41:29.720 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field authenticationManager in com.blog.service.impl.UserServiceImpl required a bean of type 'com.blog.filter.TokenValidationFilter' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.blog.filter.TokenValidationFilter' in your configuration.
+
+2023-02-21 15:42:39.089 [main] INFO  com.blog.BlogFrontApplication - Starting BlogFrontApplication using Java 1.8.0_321 on aaa with PID 6180 (D:\Blog\blog-front\target\classes started by a1387 in D:\Blog)
+2023-02-21 15:42:39.089 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2023-02-21 15:42:39.089 [main] INFO  com.blog.BlogFrontApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 15:42:39.589 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-21 15:42:39.589 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-21 15:42:39.620 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2023-02-21 15:42:39.995 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2023-02-21 15:42:40.058 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2023-02-21 15:42:40.058 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-21 15:42:40.058 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-21 15:42:40.214 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-21 15:42:40.214 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1094 ms
+2023-02-21 15:42:40.482 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-02-21 15:42:45.153 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-02-21 15:42:46.291 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41def031, org.springframework.security.web.context.SecurityContextPersistenceFilter@3f8dfe74, org.springframework.security.web.header.HeaderWriterFilter@168ad26f, org.springframework.web.filter.CorsFilter@38e83838, org.springframework.security.web.authentication.logout.LogoutFilter@28cd2c2, com.blog.filter.TokenValidationFilter@350d3f4d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a950fdd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27dc627a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39832280, org.springframework.security.web.session.SessionManagementFilter@64e7d698, org.springframework.security.web.access.ExceptionTranslationFilter@45292ec1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@715f45c6]
+2023-02-21 15:42:46.518 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2023-02-21 15:42:46.534 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+2023-02-21 15:42:46.534 [main] INFO  com.blog.BlogFrontApplication - Started BlogFrontApplication in 7.821 seconds (JVM running for 8.938)
+2023-02-21 15:42:53.118 [http-nio-80-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-21 15:42:53.118 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-02-21 15:42:53.118 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-02-21 15:42:53.451 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 8408
+2023-02-21 15:42:53.483 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 8817
+2023-02-21 15:42:53.514 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 9229
+2023-02-21 15:42:53.544 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 9669
+2023-02-21 15:42:53.576 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 10086
+2023-02-21 15:42:53.623 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 10526
+2023-02-21 15:42:53.655 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 11021
+2023-02-21 15:42:53.702 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 11456
+2023-02-21 15:42:53.735 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 11901
+2023-02-21 15:42:53.767 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 12332
+2023-02-21 16:25:38.400 [http-nio-80-exec-9] ERROR com.blog.handle.MyExceptionHandle - 用户名或密码错误
+2023-02-21 16:25:47.693 [http-nio-80-exec-6] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 9407
+2023-02-21 16:26:38.342 [http-nio-80-exec-2] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 6450
+2023-02-21 16:26:56.989 [http-nio-80-exec-10] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 16285
+2023-02-21 16:28:02.650 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-02-21 16:28:02.666 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-02-21 16:28:06.799 [main] INFO  com.blog.BlogFrontApplication - Starting BlogFrontApplication using Java 1.8.0_321 on aaa with PID 16324 (D:\Blog\blog-front\target\classes started by a1387 in D:\Blog)
+2023-02-21 16:28:06.799 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2023-02-21 16:28:06.799 [main] INFO  com.blog.BlogFrontApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 16:28:07.393 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-21 16:28:07.393 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-21 16:28:07.424 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2023-02-21 16:28:07.862 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2023-02-21 16:28:07.862 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2023-02-21 16:28:07.862 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-21 16:28:07.862 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-21 16:28:08.089 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1243 ms
+2023-02-21 16:28:08.407 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-02-21 16:28:12.900 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-02-21 16:28:14.257 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69796bd0, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b57c345, org.springframework.security.web.header.HeaderWriterFilter@d325518, org.springframework.web.filter.CorsFilter@40df6090, org.springframework.security.web.authentication.logout.LogoutFilter@39b626e5, com.blog.filter.TokenValidationFilter@6c0e13b7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@902fdbe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c059a68, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8c0a23f, org.springframework.security.web.session.SessionManagementFilter@1d4f5506, org.springframework.security.web.access.ExceptionTranslationFilter@12417468, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3d2f3dcb]
+2023-02-21 16:28:14.623 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+2023-02-21 16:28:14.639 [main] INFO  com.blog.BlogFrontApplication - Started BlogFrontApplication in 8.265 seconds (JVM running for 9.456)
+2023-02-21 16:28:15.054 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-02-21 16:28:15.085 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-02-21 16:28:57.140 [main] INFO  com.blog.BlogFrontApplication - Starting BlogFrontApplication using Java 1.8.0_321 on aaa with PID 8740 (D:\Blog\blog-front\target\classes started by a1387 in D:\Blog)
+2023-02-21 16:28:57.140 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2023-02-21 16:28:57.140 [main] INFO  com.blog.BlogFrontApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 16:28:57.671 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-21 16:28:57.671 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-21 16:28:57.686 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2023-02-21 16:28:58.077 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2023-02-21 16:28:58.139 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2023-02-21 16:28:58.139 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-21 16:28:58.139 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-21 16:28:58.280 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-21 16:28:58.280 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1109 ms
+2023-02-21 16:28:58.561 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-02-21 16:29:03.126 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-02-21 16:29:04.225 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11a3a45f, org.springframework.security.web.context.SecurityContextPersistenceFilter@7dee835, org.springframework.security.web.header.HeaderWriterFilter@459003a0, org.springframework.web.filter.CorsFilter@69796bd0, org.springframework.security.web.authentication.logout.LogoutFilter@515b9d4a, com.blog.filter.TokenValidationFilter@333c8791, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e02721d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@796d33eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40df6090, org.springframework.security.web.session.SessionManagementFilter@79b18230, org.springframework.security.web.access.ExceptionTranslationFilter@245253d8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1cbc5693]
+2023-02-21 16:29:04.444 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2023-02-21 16:29:04.459 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+2023-02-21 16:29:04.459 [main] INFO  com.blog.BlogFrontApplication - Started BlogFrontApplication in 7.747 seconds (JVM running for 8.846)
+2023-02-21 16:29:14.894 [http-nio-80-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-21 16:29:14.894 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-02-21 16:29:14.894 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-02-21 16:29:15.397 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 12381
+2023-02-21 16:29:15.428 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 12824
+2023-02-21 16:29:15.460 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 13265
+2023-02-21 16:29:15.495 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 13691
+2023-02-21 16:29:15.526 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 14101
+2023-02-21 16:29:15.572 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 14542
+2023-02-21 16:29:15.604 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 14966
+2023-02-21 16:29:15.635 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 15409
+2023-02-21 16:29:15.666 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 15853
+2023-02-21 16:29:15.697 [http-nio-80-exec-1] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 16261
+2023-02-21 16:34:43.078 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-02-21 16:34:43.078 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-02-21 16:34:50.362 [main] INFO  com.blog.BlogFrontApplication - Starting BlogFrontApplication using Java 1.8.0_321 on aaa with PID 7228 (D:\Blog\blog-front\target\classes started by a1387 in D:\Blog)
+2023-02-21 16:34:50.362 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2023-02-21 16:34:50.362 [main] INFO  com.blog.BlogFrontApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 16:34:51.343 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-21 16:34:51.343 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-21 16:34:51.390 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2023-02-21 16:34:52.041 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2023-02-21 16:34:52.135 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2023-02-21 16:34:52.135 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-21 16:34:52.135 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-21 16:34:52.385 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-21 16:34:52.385 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1976 ms
+2023-02-21 16:34:52.881 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-02-21 16:34:58.075 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-02-21 16:34:59.944 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25791d40, org.springframework.security.web.context.SecurityContextPersistenceFilter@359066bc, org.springframework.security.web.header.HeaderWriterFilter@401c4250, org.springframework.web.filter.CorsFilter@448c92fc, org.springframework.security.web.authentication.logout.LogoutFilter@5fdfe8cf, com.blog.filter.TokenValidationFilter@1859e2a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@364fd4ae, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12417468, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@251c8145, org.springframework.security.web.session.SessionManagementFilter@733fb462, org.springframework.security.web.access.ExceptionTranslationFilter@2519026b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1d6751e3]
+2023-02-21 16:35:00.307 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2023-02-21 16:35:00.323 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+2023-02-21 16:35:00.338 [main] INFO  com.blog.BlogFrontApplication - Started BlogFrontApplication in 10.526 seconds (JVM running for 12.467)
+2023-02-21 16:35:06.047 [http-nio-80-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-21 16:35:06.050 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-02-21 16:35:06.050 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-02-21 18:19:02.053 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-02-21 18:19:02.053 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-02-21 21:09:30.268 [main] INFO  com.blog.BlogFrontApplication - Starting BlogFrontApplication using Java 1.8.0_321 on aaa with PID 14660 (D:\Blog\blog-front\target\classes started by a1387 in D:\Blog)
+2023-02-21 21:09:30.269 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2023-02-21 21:09:30.270 [main] INFO  com.blog.BlogFrontApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 21:09:31.101 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-21 21:09:31.103 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-21 21:09:31.134 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2023-02-21 21:09:31.629 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2023-02-21 21:09:31.686 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2023-02-21 21:09:31.687 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-21 21:09:31.687 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-21 21:09:31.846 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-21 21:09:31.846 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1541 ms
+2023-02-21 21:09:32.196 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-02-21 21:09:37.063 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-02-21 21:09:38.256 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1edccfd4, org.springframework.security.web.context.SecurityContextPersistenceFilter@ea7a4c3, org.springframework.security.web.header.HeaderWriterFilter@7dee835, org.springframework.web.filter.CorsFilter@8c43966, com.blog.filter.TokenValidationFilter@67e13bd0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6af5b246, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2401856, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1efac5b9, org.springframework.security.web.session.SessionManagementFilter@4e8b357d, org.springframework.security.web.access.ExceptionTranslationFilter@79b18230, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4ef4f627]
+2023-02-21 21:09:38.478 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2023-02-21 21:09:38.491 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+2023-02-21 21:09:38.498 [main] INFO  com.blog.BlogFrontApplication - Started BlogFrontApplication in 8.645 seconds (JVM running for 10.229)
+2023-02-21 21:11:11.296 [http-nio-80-exec-4] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-21 21:11:11.296 [http-nio-80-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-02-21 21:11:11.297 [http-nio-80-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-02-21 21:11:40.292 [http-nio-80-exec-7] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 28273
+2023-02-21 21:11:44.203 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-02-21 21:11:44.203 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-02-21 21:11:48.643 [main] INFO  com.blog.BlogFrontApplication - Starting BlogFrontApplication using Java 1.8.0_321 on aaa with PID 5080 (D:\Blog\blog-front\target\classes started by a1387 in D:\Blog)
+2023-02-21 21:11:48.643 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2023-02-21 21:11:48.643 [main] INFO  com.blog.BlogFrontApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 21:11:49.190 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-21 21:11:49.205 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-21 21:11:49.221 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2023-02-21 21:11:49.611 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2023-02-21 21:11:49.676 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2023-02-21 21:11:49.676 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-21 21:11:49.676 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-21 21:11:49.815 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-21 21:11:49.815 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1141 ms
+2023-02-21 21:11:50.096 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-02-21 21:11:54.813 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-02-21 21:11:56.044 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11a3a45f, org.springframework.security.web.context.SecurityContextPersistenceFilter@31723307, org.springframework.security.web.header.HeaderWriterFilter@902fdbe, org.springframework.web.filter.CorsFilter@69796bd0, com.blog.filter.TokenValidationFilter@1457fde, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d6f6860, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a85644c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40df6090, org.springframework.security.web.session.SessionManagementFilter@7d42404e, org.springframework.security.web.access.ExceptionTranslationFilter@1b57c345, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@108e9837]
+2023-02-21 21:11:56.312 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2023-02-21 21:11:56.312 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+2023-02-21 21:11:56.328 [main] INFO  com.blog.BlogFrontApplication - Started BlogFrontApplication in 8.029 seconds (JVM running for 9.318)
+2023-02-21 21:12:57.328 [http-nio-80-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-21 21:12:57.328 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-02-21 21:12:57.328 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-02-21 21:13:49.097 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-02-21 21:13:49.097 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-02-21 21:13:58.286 [main] INFO  com.blog.BlogFrontApplication - Starting BlogFrontApplication using Java 1.8.0_321 on aaa with PID 4996 (D:\Blog\blog-front\target\classes started by a1387 in D:\Blog)
+2023-02-21 21:13:58.286 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2023-02-21 21:13:58.301 [main] INFO  com.blog.BlogFrontApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 21:13:59.067 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-21 21:13:59.067 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-21 21:13:59.098 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2023-02-21 21:13:59.723 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2023-02-21 21:13:59.739 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2023-02-21 21:13:59.739 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-21 21:13:59.739 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-21 21:13:59.895 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-21 21:13:59.895 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1531 ms
+2023-02-21 21:14:00.258 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-02-21 21:14:07.620 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-02-21 21:14:08.995 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@651caa2e, org.springframework.security.web.context.SecurityContextPersistenceFilter@28e48b65, org.springframework.security.web.header.HeaderWriterFilter@1a336906, org.springframework.web.filter.CorsFilter@433ae0b0, com.blog.filter.TokenValidationFilter@3db65c0d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f4d2294, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22361e23, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@70840a5a, org.springframework.security.web.session.SessionManagementFilter@77ce8bc5, org.springframework.security.web.access.ExceptionTranslationFilter@70ecf57b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28b5d5dc]
+2023-02-21 21:14:09.342 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2023-02-21 21:14:09.358 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+2023-02-21 21:14:09.358 [main] INFO  com.blog.BlogFrontApplication - Started BlogFrontApplication in 11.523 seconds (JVM running for 13.428)
+2023-02-21 21:14:18.508 [http-nio-80-exec-4] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-21 21:14:18.508 [http-nio-80-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-02-21 21:14:18.509 [http-nio-80-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-02-21 21:14:46.588 [http-nio-80-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 39133
+2023-02-21 21:14:46.621 [http-nio-80-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 39935
+2023-02-21 21:14:46.652 [http-nio-80-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 40644
+2023-02-21 21:15:27.594 [http-nio-80-exec-4] ERROR com.blog.handle.MyExceptionHandle - 暂无评论
+2023-02-21 21:23:48.998 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-02-21 21:23:48.998 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-02-21 21:31:43.092 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2023-02-21 21:31:43.092 [main] INFO  com.blog.BlogFrontApplication - Starting BlogFrontApplication using Java 1.8.0_321 on aaa with PID 4916 (D:\Blog\blog-front\target\classes started by a1387 in D:\Blog)
+2023-02-21 21:31:43.092 [main] INFO  com.blog.BlogFrontApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 21:31:43.671 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-21 21:31:43.671 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-21 21:31:43.686 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2023-02-21 21:31:44.093 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2023-02-21 21:31:44.155 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2023-02-21 21:31:44.155 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-21 21:31:44.155 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-21 21:31:44.296 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-21 21:31:44.296 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1157 ms
+2023-02-21 21:31:44.599 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-02-21 21:31:51.268 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-02-21 21:31:52.371 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d2fb82, org.springframework.security.web.context.SecurityContextPersistenceFilter@2a8b33ba, org.springframework.security.web.header.HeaderWriterFilter@18a096b5, org.springframework.web.filter.CorsFilter@34045582, com.blog.filter.TokenValidationFilter@22eaa86e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e1eb85f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d42404e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3db65c0d, org.springframework.security.web.session.SessionManagementFilter@2f79f192, org.springframework.security.web.access.ExceptionTranslationFilter@28cd2c2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@733e6df7]
+2023-02-21 21:31:52.578 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2023-02-21 21:31:52.593 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+2023-02-21 21:31:52.609 [main] INFO  com.blog.BlogFrontApplication - Started BlogFrontApplication in 9.861 seconds (JVM running for 11.032)
+2023-02-21 21:31:57.800 [http-nio-80-exec-3] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-21 21:31:57.800 [http-nio-80-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-02-21 21:31:57.815 [http-nio-80-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2023-02-21 21:31:58.104 [http-nio-80-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 6961
+2023-02-21 21:31:58.168 [http-nio-80-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 7581
+2023-02-21 21:31:58.199 [http-nio-80-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 8215
+2023-02-21 21:31:58.277 [http-nio-80-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 8909
+2023-02-21 21:31:58.308 [http-nio-80-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 9521
+2023-02-21 21:31:58.372 [http-nio-80-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 10209
+2023-02-21 21:31:58.402 [http-nio-80-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 10846
+2023-02-21 21:31:58.480 [http-nio-80-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 11556
+2023-02-21 21:31:58.512 [http-nio-80-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 12189
+2023-02-21 21:31:58.574 [http-nio-80-exec-3] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 12901
+2023-02-21 21:31:59.022 [http-nio-80-exec-3] ERROR com.blog.handle.MyExceptionHandle - null
+2023-02-21 21:35:39.446 [http-nio-80-exec-8] ERROR com.blog.handle.MyExceptionHandle - null
+2023-02-21 21:38:38.179 [http-nio-80-exec-5] ERROR com.blog.handle.MyExceptionHandle - null
+2023-02-21 21:41:32.362 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-02-21 21:41:32.362 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-02-21 21:41:39.972 [main] INFO  com.blog.BlogFrontApplication - Starting BlogFrontApplication using Java 1.8.0_321 on aaa with PID 4516 (D:\Blog\blog-front\target\classes started by a1387 in D:\Blog)
+2023-02-21 21:41:39.972 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2023-02-21 21:41:39.972 [main] INFO  com.blog.BlogFrontApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 21:41:41.379 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-21 21:41:41.379 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-21 21:41:41.426 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2023-02-21 21:41:42.491 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2023-02-21 21:41:42.506 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2023-02-21 21:41:42.506 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-21 21:41:42.506 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-21 21:41:42.803 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-21 21:41:42.803 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2722 ms
+2023-02-21 21:41:43.386 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-02-21 21:41:50.686 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-02-21 21:41:52.739 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3395c2a7, org.springframework.security.web.context.SecurityContextPersistenceFilter@8d29719, org.springframework.security.web.header.HeaderWriterFilter@2d230cff, org.springframework.web.filter.CorsFilter@5e05a706, com.blog.filter.TokenValidationFilter@3e6ec74, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4bff28e7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39e7e040, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7831d1aa, org.springframework.security.web.session.SessionManagementFilter@3f122cdc, org.springframework.security.web.access.ExceptionTranslationFilter@47b961e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@362be0cd]
+2023-02-21 21:41:53.132 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2023-02-21 21:41:53.164 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+2023-02-21 21:41:53.179 [main] INFO  com.blog.BlogFrontApplication - Started BlogFrontApplication in 13.984 seconds (JVM running for 16.346)
+2023-02-21 21:42:23.183 [http-nio-80-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-21 21:42:23.183 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-02-21 21:42:23.184 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-02-21 21:42:24.386 [http-nio-80-exec-1] ERROR com.blog.handle.MyExceptionHandle - null
+2023-02-21 21:52:03.159 [http-nio-80-exec-9] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 14875
+2023-02-21 21:53:14.348 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-02-21 21:53:14.348 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-02-21 21:53:30.477 [main] INFO  com.blog.BlogFrontApplication - Starting BlogFrontApplication using Java 1.8.0_321 on aaa with PID 13748 (D:\Blog\blog-front\target\classes started by a1387 in D:\Blog)
+2023-02-21 21:53:30.489 [main] INFO  com.blog.BlogFrontApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 21:53:30.493 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2023-02-21 21:53:31.492 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-21 21:53:31.495 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-21 21:53:31.534 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2023-02-21 21:53:32.221 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2023-02-21 21:53:32.318 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2023-02-21 21:53:32.319 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-21 21:53:32.319 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-21 21:53:32.562 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-21 21:53:32.563 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1994 ms
+2023-02-21 21:53:33.048 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-02-21 21:53:39.824 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-02-21 21:53:41.081 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1edccfd4, org.springframework.security.web.context.SecurityContextPersistenceFilter@ea7a4c3, org.springframework.security.web.header.HeaderWriterFilter@7dee835, org.springframework.web.filter.CorsFilter@8c43966, com.blog.filter.TokenValidationFilter@1dc3502b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6af5b246, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2401856, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1efac5b9, org.springframework.security.web.session.SessionManagementFilter@4e8b357d, org.springframework.security.web.access.ExceptionTranslationFilter@79b18230, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4ef4f627]
+2023-02-21 21:53:41.318 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2023-02-21 21:53:41.318 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+2023-02-21 21:53:41.333 [main] INFO  com.blog.BlogFrontApplication - Started BlogFrontApplication in 11.457 seconds (JVM running for 13.659)
+2023-02-21 21:54:07.972 [http-nio-80-exec-4] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-21 21:54:07.973 [http-nio-80-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-02-21 21:54:07.974 [http-nio-80-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-02-21 21:54:08.282 [http-nio-80-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 28577
+2023-02-21 21:54:08.365 [http-nio-80-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 29296
+2023-02-21 21:54:08.399 [http-nio-80-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 29946
+2023-02-21 21:54:08.468 [http-nio-80-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 30709
+2023-02-21 21:54:08.496 [http-nio-80-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 31276
+2023-02-21 21:54:08.574 [http-nio-80-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 31855
+2023-02-21 21:54:08.605 [http-nio-80-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 32399
+2023-02-21 21:54:08.678 [http-nio-80-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 33053
+2023-02-21 21:54:08.712 [http-nio-80-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 33707
+2023-02-21 21:54:08.780 [http-nio-80-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 34304
+2023-02-21 22:00:06.912 [http-nio-80-exec-6] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 22958
+2023-02-21 22:00:28.619 [http-nio-80-exec-2] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 20278
+2023-02-21 22:01:01.751 [http-nio-80-exec-8] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://43.139.41.149:3306/Blog, version : 1.2.5, lastPacketReceivedIdleMillis : 32118
+2023-02-21 22:02:06.290 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-02-21 22:02:06.290 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

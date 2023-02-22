@@ -25,15 +25,26 @@ public class SystemConstants {
     /**
      * 审核通过
      */
-    public static final Integer APPROVED=0;
+    public static final Integer APPROVED = 0;
 
     /**
      * 审核未通过
      */
-    public static final Integer FAILED_TO_PASS_THE_REVIEW=2;
+    public static final Integer FAILED_TO_PASS_THE_REVIEW = 2;
 
     /**
      * 正在审核
      */
-    public static final Integer AUDITING=1;
+    public static final Integer AUDITING = 1;
+
+    /**
+     * 博客登录
+     */
+    public static final String BLOG_LOGIN = "blogLogin:";
+
+    /**
+     * 根评论
+     */
+    public static final String COMMENT_ROOT = "-1";
+
 }

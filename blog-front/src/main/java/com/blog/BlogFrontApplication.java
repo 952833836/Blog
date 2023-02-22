@@ -14,6 +14,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("com.blog.mapper")
 public class BlogFrontApplication {
     public static void main(String[] args) {
-        SpringApplication.run(BlogFrontApplication.class,args);
+        SpringApplication.run(BlogFrontApplication.class, args);
     }
 }

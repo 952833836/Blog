@@ -1,12 +1,6 @@
 package com.blog.pojo.vo;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 /**
  * link

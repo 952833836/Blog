@@ -24,7 +24,7 @@ public class LinkController {
     LinkService linkService;
 
     @GetMapping("getAllLink")
-    public ResponseResult<List<LinkVo>> getLinkList(){
+    public ResponseResult<List<LinkVo>> getLinkList() {
         return linkService.getLinkList();
     }
 }

@@ -8,16 +8,16 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 友链表
+ * 评论表
  *
  * @author a1387
- * @TableName link
- * @date 2023/02/20
+ * @TableName comment
+ * @date 2023/02/21
  */
-@TableName(value = "link")
+@TableName(value = "comment")
 @Data
 @Accessors(chain = true)
-public class Link implements Serializable {
+public class Comment implements Serializable {
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
     /**
@@ -25,31 +25,37 @@ public class Link implements Serializable {
      */
     @TableId(value = "id")
     private String id;
+
     /**
-     * 友链名称
+     * 评论类型（0代表文章评论，1代表友链评论）
      */
-    @TableField(value = "name")
-    private String name;
+    @TableField(value = "type")
+    private Integer type;
     /**
-     * 友链地址
+     * 文章id
      */
-    @TableField(value = "address")
-    private String address;
+    @TableField(value = "article_id")
+    private String articleId;
     /**
-     * 友链logo
+     * 根评论id
      */
-    @TableField(value = "logo")
-    private String logo;
+    @TableField(value = "root_id")
+    private String rootId;
     /**
-     * 友链详情
+     * 评论内容
      */
-    @TableField(value = "description")
-    private String description;
+    @TableField(value = "content")
+    private String content;
     /**
-     * 审核状态(0审核通过，1待审核，2审核不通过)
+     * 所回复的目标评论的userid
      */
-    @TableField(value = "status", fill = FieldFill.INSERT)
-    private Integer status;
+    @TableField(value = "to_comment_user_id")
+    private String toCommentUserId;
+    /**
+     * 回复目标评论id
+     */
+    @TableField(value = "to_comment_id")
+    private String toCommentId;
     /**
      * 创建者id
      */
@@ -76,5 +82,6 @@ public class Link implements Serializable {
     @TableField(value = "del_flag")
     @TableLogic
     private Integer delFlag;
+
 
 }

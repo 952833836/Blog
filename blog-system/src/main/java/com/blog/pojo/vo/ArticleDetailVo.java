@@ -1,7 +1,7 @@
 package com.blog.pojo.vo;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 import java.time.LocalDateTime;
@@ -12,9 +12,10 @@ import java.time.LocalDateTime;
  * @author a1387
  * @date 2023/02/19
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 @Accessors(chain = true)
-public class ArticleDetailVo extends ArticlesVo{
+public class ArticleDetailVo extends ArticlesVo {
     private static final long serialVersionUID = 1L;
     /**
      *

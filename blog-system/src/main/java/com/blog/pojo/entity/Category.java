@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * 类别
@@ -54,8 +54,8 @@ public class Category implements Serializable {
     /**
      * 创建时间
      */
-    @TableField(value = "create_time",fill = FieldFill.INSERT)
-    private LocalDateTime createTime;
+    @TableField(value = "create_time", fill = FieldFill.INSERT)
+    private Date createTime;
     /**
      * 更新者id
      */
@@ -64,8 +64,8 @@ public class Category implements Serializable {
     /**
      * 跟新时间
      */
-    @TableField(value = "update_time",fill = FieldFill.INSERT_UPDATE )
-    private LocalDateTime updateTime;
+    @TableField(value = "update_time", fill = FieldFill.INSERT_UPDATE)
+    private Date updateTime;
     /**
      * 逻辑删除标制
      */
