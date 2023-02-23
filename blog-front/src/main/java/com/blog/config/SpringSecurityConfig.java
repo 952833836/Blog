@@ -5,7 +5,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -23,6 +25,11 @@ import javax.annotation.Resource;
  * @date 2023/02/20
  */
 @Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(
+        prePostEnabled = true,
+        securedEnabled = true,
+        jsr250Enabled = true)
 public class SpringSecurityConfig {
 
     @Resource
@@ -53,6 +60,7 @@ public class SpringSecurityConfig {
                 //方行/login接口用于登录
                 .antMatchers("/users/login").anonymous()
                 .antMatchers("/users/logOut").authenticated()
+                .antMatchers("/comments","/links","/users/**","/files/**").authenticated()
                 //除此之外所以接口均不需要权限验证,具体需要进行权限验证的接口使用注解进行
                 .anyRequest().permitAll()
                 .and()

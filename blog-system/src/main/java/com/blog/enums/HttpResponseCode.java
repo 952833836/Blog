@@ -75,7 +75,8 @@ public enum HttpResponseCode {
     /**
      * 参数异常
      */
-    PARAMETER_EXCEPTION(405, "参数异常");
+    PARAMETER_EXCEPTION(405, "参数异常"),
+    INCORRECT_PICTURE_FORMAT(507,"图片格式不正确,请选择正确的图片类型(jpeg,png)");
 
     private Integer code;
     private String msg;

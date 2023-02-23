@@ -14,7 +14,7 @@ import com.blog.pojo.vo.ArticlesVo;
 import com.blog.pojo.vo.HotArticlesVo;
 import com.blog.pojo.vo.PageVo;
 import com.blog.service.ArticlesService;
-import com.blog.util.BeanCopyUtil;
+import com.blog.pojo.util.BeanCopyUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 

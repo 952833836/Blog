@@ -10,7 +10,7 @@ import com.blog.pojo.entity.Category;
 import com.blog.pojo.vo.CategoryVo;
 import com.blog.service.ArticlesService;
 import com.blog.service.CategoryService;
-import com.blog.util.BeanCopyUtil;
+import com.blog.pojo.util.BeanCopyUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

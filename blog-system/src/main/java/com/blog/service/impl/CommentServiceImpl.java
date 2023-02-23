@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.blog.common.SystemConstants;
+import com.blog.enums.HttpResponseCode;
+import com.blog.exception.SystemException;
 import com.blog.mapper.CommentMapper;
 import com.blog.pojo.ResponseResult;
 import com.blog.pojo.entity.Comment;
@@ -12,8 +14,9 @@ import com.blog.pojo.vo.CommentVo;
 import com.blog.pojo.vo.PageVo;
 import com.blog.service.CommentService;
 import com.blog.service.UserService;
-import com.blog.util.BeanCopyUtil;
+import com.blog.pojo.util.BeanCopyUtil;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -36,6 +39,16 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment>
 
     @Resource
     UserService userService;
+
+    @Override
+    public ResponseResult addComment(Comment comment) {
+        //评论内容不能为空
+        if (!StringUtils.hasText(comment.getContent())) {
+            throw new SystemException(HttpResponseCode.CONTENT_NOT_NULL);
+        }
+        save(comment);
+        return ResponseResult.okResult();
+    }
 
     @Override
     public ResponseResult getCommentList(String articleId, Integer type, Integer pageNum, Integer pageSize) {
@@ -69,8 +82,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment>
      */
     public List<CommentVo> getChildComments(String id) {
         LambdaQueryWrapper<Comment> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.eq(Comment::getRootId, id);
-        queryWrapper.orderByAsc(Comment::getCreateTime);
+        queryWrapper.eq(Comment::getRootId, id).orderByAsc(Comment::getCreateTime);
         List<Comment> comments = list(queryWrapper);
         return getCommentVoList(comments);
     }
@@ -84,14 +96,13 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment>
     public List<CommentVo> getCommentVoList(List<Comment> commentList) {
         List<CommentVo> commentVos = BeanCopyUtil.copyBeanList(commentList, CommentVo.class);
         return commentVos.stream()
-                .map(e -> {
+                .peek(e -> {
                     User user = userService.getById(e.getCreateBy());
                     e.setNickname(user.getNickname());
                     if (!e.getRootId().equals(SystemConstants.COMMENT_ROOT)) {
                         User byId = userService.getById(e.getToCommentUserId());
                         e.setToCommentUserName(byId.getNickname());
                     }
-                    return e;
                 }).collect(Collectors.toList());
     }
 

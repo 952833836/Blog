@@ -1,4 +1,4 @@
-package com.blog.util;
+package com.blog.pojo.util;
 
 import org.springframework.data.redis.core.BoundSetOperations;
 import org.springframework.data.redis.core.HashOperations;

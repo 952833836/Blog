@@ -47,4 +47,9 @@ public class SystemConstants {
      */
     public static final String COMMENT_ROOT = "-1";
 
+    /**
+     * 该用户的创建人为自己本身
+     */
+    public static String REGISTER_YOURSELF = "createMe";
+
 }

@@ -5,6 +5,9 @@ server:
   servlet:
     context-path: /
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   #druidDataSource配置
   datasource:
     druid:
@@ -97,5 +100,8 @@ mybatis-plus:
       #全局设置主键生成策略为uuid
       id-type: assign_uuid
 
-
-
+oss:
+  accessKey: "DAEax0fCkaaHar4bVg0w-sBNqeyYnLUDG4-gl-di"
+  secretKey: "cI3FxBJ5HCGRF613stuGfj-b31q0sceL8gO3Ito8"
+  bucket: "thd-blog"
+  domainName: "http://rqitggfib.hn-bkt.clouddn.com/"

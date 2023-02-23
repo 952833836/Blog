@@ -3,7 +3,7 @@ package com.blog.handle.security;
 import com.alibaba.fastjson.JSON;
 import com.blog.enums.HttpResponseCode;
 import com.blog.pojo.ResponseResult;
-import com.blog.util.WebUtils;
+import com.blog.pojo.util.WebUtils;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;

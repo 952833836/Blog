@@ -59,7 +59,7 @@ public class Comment implements Serializable {
     /**
      * 创建者id
      */
-    @TableField(value = "create_by")
+    @TableField(value = "create_by", fill = FieldFill.INSERT)
     private String createBy;
     /**
      * 创建时间
@@ -69,7 +69,7 @@ public class Comment implements Serializable {
     /**
      * 更新者id
      */
-    @TableField(value = "update_by")
+    @TableField(value = "update_by", fill = FieldFill.INSERT)
     private String updateBy;
     /**
      * 跟新时间

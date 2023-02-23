@@ -1,10 +1,16 @@
-package com.blog.util;
+package com.blog.pojo.util;
 
 import org.springframework.beans.BeanUtils;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * 豆复制跑龙套
+ *
+ * @author a1387
+ * @date 2023/02/23
+ */
 public class BeanCopyUtil {
 
     private BeanCopyUtil() {
@@ -16,9 +22,7 @@ public class BeanCopyUtil {
         T result = null;
         try {
             result = clazz.newInstance();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        } catch (InstantiationException | IllegalAccessException e) {
             e.printStackTrace();
         }
         //实现属性复制

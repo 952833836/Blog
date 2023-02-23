@@ -12,6 +12,14 @@ import com.blog.pojo.entity.Comment;
 public interface CommentService extends IService<Comment> {
 
     /**
+     * 添加评论
+     *
+     * @param comment 评论
+     * @return {@link ResponseResult}
+     */
+    ResponseResult addComment(Comment comment);
+
+    /**
      * 得到评论列表
      *
      * @param articleId 文章id

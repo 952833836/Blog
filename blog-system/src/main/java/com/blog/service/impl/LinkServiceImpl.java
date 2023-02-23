@@ -8,7 +8,7 @@ import com.blog.pojo.ResponseResult;
 import com.blog.pojo.entity.Link;
 import com.blog.pojo.vo.LinkVo;
 import com.blog.service.LinkService;
-import com.blog.util.BeanCopyUtil;
+import com.blog.pojo.util.BeanCopyUtil;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

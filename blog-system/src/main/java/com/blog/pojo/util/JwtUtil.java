@@ -1,4 +1,4 @@
-package com.blog.util;
+package com.blog.pojo.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;

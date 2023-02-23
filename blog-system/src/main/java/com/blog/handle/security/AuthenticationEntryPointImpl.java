@@ -4,7 +4,7 @@ package com.blog.handle.security;
 import com.alibaba.fastjson.JSON;
 import com.blog.enums.HttpResponseCode;
 import com.blog.pojo.ResponseResult;
-import com.blog.util.WebUtils;
+import com.blog.pojo.util.WebUtils;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.InsufficientAuthenticationException;
 import org.springframework.security.core.AuthenticationException;

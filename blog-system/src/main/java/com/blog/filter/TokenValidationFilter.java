@@ -5,9 +5,9 @@ import com.blog.common.SystemConstants;
 import com.blog.enums.HttpResponseCode;
 import com.blog.pojo.ResponseResult;
 import com.blog.pojo.dto.LoginUser;
-import com.blog.util.JwtUtil;
-import com.blog.util.RedisUtil;
-import com.blog.util.WebUtils;
+import com.blog.pojo.util.JwtUtil;
+import com.blog.pojo.util.RedisUtil;
+import com.blog.pojo.util.WebUtils;
 import io.jsonwebtoken.Claims;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -62,7 +62,7 @@ public class TokenValidationFilter extends OncePerRequestFilter {
             return;
         }
         //将loginUser封装为UsernamePasswordAuthenticationToken对象，传入SecurityContextHolder
-        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(loginUser, null, null);
+        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(loginUser, null, loginUser.getAuthorities());
         SecurityContextHolder.getContext().setAuthentication(authenticationToken);
         filterChain.doFilter(request, response);
     }

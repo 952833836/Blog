@@ -22,5 +22,5 @@ public interface LinkService extends IService<Link> {
      *
      * @return {@link ResponseResult}
      */
-     ResponseResult<List<LinkVo>> getLinkList();
+    ResponseResult<List<LinkVo>> getLinkList();
 }

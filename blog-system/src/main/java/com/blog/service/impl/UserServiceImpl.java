@@ -9,9 +9,10 @@ import com.blog.pojo.entity.User;
 import com.blog.pojo.vo.BlogUserLoginVo;
 import com.blog.pojo.vo.UserInfo;
 import com.blog.service.UserService;
-import com.blog.util.BeanCopyUtil;
-import com.blog.util.JwtUtil;
-import com.blog.util.RedisUtil;
+import com.blog.pojo.util.BeanCopyUtil;
+import com.blog.pojo.util.JwtUtil;
+import com.blog.pojo.util.RedisUtil;
+import com.blog.pojo.util.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -60,6 +61,24 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         redisUtil.deleteObject(SystemConstants.BLOG_LOGIN + principal.getUser().getId());
         return ResponseResult.okResult(200, "已成功退出登录");
     }
+
+    @Override
+    public ResponseResult getUserInfo() {
+        String userId = SecurityUtils.getUserId();
+        UserInfo userInfo = BeanCopyUtil.copyBean(getById(userId), UserInfo.class);
+        return ResponseResult.okResult(userInfo);
+    }
+
+    @Override
+    public ResponseResult updateUserInformation(User user) {
+        //将外链链接跟新到数据库和redis;
+        LoginUser loginUser = SecurityUtils.getLoginUser();
+        loginUser.setUser(user);
+        redisUtil.setCacheObject(SystemConstants.BLOG_LOGIN+user.getId(),loginUser);
+        updateById(user);
+        return ResponseResult.okResult();
+    }
+
 }
 
 

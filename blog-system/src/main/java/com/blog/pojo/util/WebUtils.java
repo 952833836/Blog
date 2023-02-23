@@ -1,4 +1,4 @@
-package com.blog.util;
+package com.blog.pojo.util;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
